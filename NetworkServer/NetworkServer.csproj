@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{375C16C5-246F-4B5B-A568-F1342EF45FB6}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CocoLib</RootNamespace>
-    <AssemblyName>CocoLib</AssemblyName>
+    <ProjectGuid>{B9BB4E70-DCD6-4ABD-B387-FA2466C65BCF}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>NetworkServer</RootNamespace>
+    <AssemblyName>NetworkServer</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -30,9 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,25 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Autonomous\AutoFactory.cs" />
-    <Compile Include="Autonomous\Command.cs" />
-    <Compile Include="Autonomous\DirectoryListing.cs" />
-    <Compile Include="Autonomous\AutoInstruction.cs" />
-    <Compile Include="Autonomous\Enums\Enums.cs" />
-    <Compile Include="Autonomous\Exceptions\InvalidTypeException.cs" />
-    <Compile Include="Autonomous\Exceptions\InvalidUnitException.cs" />
-    <Compile Include="Autonomous\Events.cs" />
-    <Compile Include="Logging\DataLogger.cs" />
-    <Compile Include="Networking\Client.cs" />
-    <Compile Include="Networking\Listener.cs" />
-    <Compile Include="Networking\StateObject.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Autonomous\Tools\" />
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
